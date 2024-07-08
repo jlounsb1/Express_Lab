@@ -25,6 +25,13 @@ app.get('/', (req, res) => {
     )
 })
 
+app.get('/u/:nameUser', (req, res) => {
+    res.render(
+        'index',
+        {name: req.params.nameUser}
+    )
+})
+
 app.get('/about', (req, res) => {
     res.render(
         'about',
@@ -32,6 +39,16 @@ app.get('/about', (req, res) => {
     )
 })
 
+
+
 app.listen(port, () => {
     console.log(`Server is listening at port ${port}`)
 });
+
+const users = []
+
+app.post('/about', (req, res) => {
+    console.log(req.params)
+})
+
+const siteUsers = []

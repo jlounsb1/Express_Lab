@@ -8,5 +8,13 @@ html(lang="en")
         h1 #{name} About Page
         p There's not that much to tell really...
         br
+        form
+            label(for="username") 
+            input(type="text", name="username")
+            label(for="password") 
+            input(type="text", name="password")
+            input(type="submit", value="submit")
+        br
+        hr
         a(href='/')
             button Home
