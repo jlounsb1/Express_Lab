@@ -8,7 +8,7 @@ html(lang="en")
         h1 #{name} About Page
         p There's not that much to tell really...
         br
-        form
+        form(method="post", action="/about")
             label(for="username") 
             input(type="text", name="username")
             label(for="password") 

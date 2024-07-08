@@ -39,16 +39,16 @@ app.get('/about', (req, res) => {
     )
 })
 
+app.post('/about', (req, res) =>{
+    
+    res.send(`<p>thanks.</p> <p>I can see the request in dev tools network, but I can't access it on my server.</p><a href='/'><button>Home</button></a>`)
 
+    
+    
+})
 
 app.listen(port, () => {
     console.log(`Server is listening at port ${port}`)
 });
 
 const users = []
-
-app.post('/about', (req, res) => {
-    console.log(req.params)
-})
-
-const siteUsers = []
