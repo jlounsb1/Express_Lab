@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        link(href="styles.css", rel="stylesheet")
+        meta(charset="UTF-8")
+        title About
+    body 
+        h1 #{name} Login
+        p please log in.
+        br
+        form(method="post", action="/login")
+            label(for="username") 
+            input(type="text", name="username")
+            label(for="password") 
+            input(type="text", name="password")
+            input(type="submit", value="login")
+        br
+        hr
+        a(href='/')
+            button Home
+        
+        a(href='/about')
+            button about
