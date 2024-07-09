@@ -17,9 +17,10 @@ app.use(express.urlencoded({extended:true}))
 //found the need for these middleware on a youtube video
 app.use(logReq)
 app.use('/user', userRoutes); // makes the user file a piece of middleware only used when on the user path as defined in this function
-app.use(express.static('./public')) // This is to set up a basic static page as the home.
-app.use(express.static('./styles')) // use stylesheet in the apporopriate folder
+app.use(express.static('public')) // This is to set up a basic static page as the home.
+app.use(express.static('styles')) // use stylesheet in the apporopriate folder
 app.use('/login', login)
+
 
 app.set("views", "./views");
 app.set('view engine', 'pug');

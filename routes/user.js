@@ -6,7 +6,7 @@ router.use((req, res, next) => {
     next();
 })
 
-//for routs you have to set the base as /, then define what it is in the piece you export, usually server.js
+//for routes you have to set the base as /, then define what it is in the piece you export, usually server.js
 router
     .route('/')
     .get((req, res) => {
@@ -14,18 +14,15 @@ router
             'user',
             {name: 'NeedsLogin'}
         )
-    })
-    .post((req, res) => {
-        res.send(`Me Dis`)
-    })
-    .delete((req, res) => {
-        console.log(`Go away`)
     });
 
-    router.get('./settings', (req, res) => {
-        res.send(`Get user Settings`)
-    });
+router.get('/:userID', (req, res) => {
+    res.render(
+        'user',
+        {name: req.params.userID}
+    )
+})
 
-    module.exports = router;
+module.exports = router;
 
     //user page
