@@ -10,7 +10,10 @@ router.use((req, res, next) => {
 router
     .route('/')
     .get((req, res) => {
-        res.send(`Who Dis?`)
+        res.render(
+            'user',
+            {name: 'NeedsLogin'}
+        )
     })
     .post((req, res) => {
         res.send(`Me Dis`)
