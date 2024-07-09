@@ -46,6 +46,11 @@ app.get('/about', (req, res) => {
     )
 })
 
+app.post('/', (req, res) => {
+    res.download('public/radar.jpg' )
+})
+
+
 
 app.listen(port, () => {
     console.log(`Server is listening at port ${port}`)
